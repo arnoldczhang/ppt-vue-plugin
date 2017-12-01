@@ -4,10 +4,10 @@ factory.install = (Vue, options) => {
   const searchMap = new Map();
 
   const search = {
-    bind(inst) {
+    register(inst) {
       searchMap.set(inst, new Map());
     },
-    unbind(inst) {
+    unregister(inst) {
       searchMap.delete(inst);
     },
   };
@@ -16,18 +16,19 @@ factory.install = (Vue, options) => {
     vnode.isPending = true;
     promise.then((res) => {
       const nextFunc = vnode.nextFunc;
-      vnode.nextFunc = null;
       if (typeof nextFunc === 'function') {
+        vnode.nextFunc = null;
         return nextTick(vnode, nextFunc());
       }
       vnode.isPending = false;
       return res;
+    }, (err) => {
+      console.log(err.message);
+      vnode.isPending = false;
     });
   };
 
   const inputEvent = function inputEvent(ctx, vnode, func = noop) {
-    if (this.value === vnode.beforeSearchValue) return;
-    vnode.beforeSearchValue = this.value;
     if (vnode.isPending) {
       vnode.nextFunc = func.bind(ctx, this.value);
       return;

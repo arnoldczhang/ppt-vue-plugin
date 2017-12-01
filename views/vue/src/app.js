@@ -1,10 +1,12 @@
 import Vue from 'vue';
-import App from './App';
+import VueResource from 'vue-resource';
+import App from './App.vue';
 import router from './router';
-import Search from './plugins/Search';
 
 Vue.config.productionTip = false;
-Vue.use(Search);
+Vue.use(VueResource);
+
+/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,

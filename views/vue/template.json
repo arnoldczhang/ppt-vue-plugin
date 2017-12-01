@@ -1,0 +1,76 @@
+[
+  "Vue插件浅析",
+  {
+    "type": "list",
+    "title": "目录",
+    "list": [
+      "vue简介",
+      "创建插件",
+      "使用插件",
+      "插件内部",
+      "动手实践"
+    ]
+  },
+  {
+    "type": "list2",
+    "title": "vue简介",
+    "list": [
+      "安装",
+      "结构",
+      "风格"
+    ]
+  },
+  {
+    "type": "list",
+    "title": "创建插件",
+    "list": [
+      "object.install",
+      "function"
+    ]
+  },
+  {
+    "type": "demo"
+  },
+  {
+    "type": "list",
+    "title": "使用插件",
+    "list": [
+      "Vue.use"
+    ]
+  },
+  {
+    "type": "demo"
+  },
+  {
+    "type": "list",
+    "title": "插件内部",
+    "list": [
+      "添加基于Vue对象的方法或者属性",
+      "添加指令/过滤器/过渡",
+      "通过Vue.mixin，添加hook",
+      "添加Vue原型方法"
+    ]
+  },
+  {
+    "type": "demo"
+  },
+  {
+    "type": "image",
+    "title": "动手实践",
+    "subTitle": "aaa",
+    "image": [
+      "/images/tt.jpg"
+    ]
+  },
+  {
+    "type": "list",
+    "title": "参考",
+    "list": [
+      "https://cn.vuejs.org/v2/guide/installation.html"
+    ],
+  },
+  {
+    "type": "word",
+    "content": "Q&A"
+  }
+]

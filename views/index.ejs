@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="/styles/index.css">
+<article id="content">
+  <% if (loginState === '未登录') { %>
+    <section id="noLoginSection">
+      <p>请登录</p>
+      <input type="text" name="username" id="username" />
+      <input type="password" name="password" id="password" />
+      <button id="loginBtn">login</button>
+    </section>
+  <% } else { %>
+    <p id="loginSection">欢迎，<%= loginState.name %></p>
+  <% } %>
+</article>
+<textarea id="code">
+</textarea>
+<button id="submit">提交</button>
+<iframe id="template" src="/demo.html"></iframe>
+<article id="code-space">
+  <section id="code-content">
+    <span class="code-line code-cursor"></span>
+  </section>
+</article>
+<input type="text" name="" id="fakeinput" style="opacity: 0;">
+<script type="text/javascript" src="/scripts/index.js"></script>

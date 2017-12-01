@@ -24,6 +24,8 @@ module.exports = {
   },
   // add your custom rules here
   'rules': {
+    'no-new': 0,
+    'object-shorthand': 0,
     'no-console': 0,
     'no-param-reassign': 0,
     'no-unused-vars': 0,
