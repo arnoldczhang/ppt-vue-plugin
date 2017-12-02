@@ -2,7 +2,7 @@
   <div class="listPage">
     <h2 class="contentTitle">{{ title }}</h2>
     <ul class="listUl">
-      <li class="listLi" v-for="item in list">{{ item }}</li>
+      <li class="listLi" v-for="item in list" v-html="item"></li>
     </ul>
   </div>
 </template>
@@ -58,9 +58,7 @@ export default {
   width: 15px;
   border-radius: 50%;
   left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 14px;
   display: inline-block;
   position: absolute;
   color: #333;

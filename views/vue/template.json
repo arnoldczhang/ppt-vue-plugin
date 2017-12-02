@@ -22,24 +22,32 @@
   },
   {
     "type": "list",
-    "title": "创建插件",
+    "title": "vue - 安装",
     "list": [
-      "object.install",
-      "function"
+      "<cite>https://cn.vuejs.org/v2/guide/installation.html</cite>"
     ]
   },
   {
-    "type": "demo"
+    "type": "list2",
+    "title": "vue - 结构 + 风格",
+    "list": [
+      "看代码"
+    ]
   },
   {
     "type": "list",
-    "title": "使用插件",
+    "title": "创建插件",
     "list": [
-      "Vue.use"
+      "<code>object.install</code>",
+      "<code>function</code>"
     ]
   },
   {
-    "type": "demo"
+    "type": "list2",
+    "title": "使用插件",
+    "list": [
+      "<code>Vue.use</code>"
+    ]
   },
   {
     "type": "list",
@@ -52,21 +60,114 @@
     ]
   },
   {
-    "type": "demo"
+    "type": "list2",
+    "title": "添加基于Vue对象的方法或者属性",
+    "list": [
+      "<code>Vue.xx = ...;</code>",
+    ]
+  },
+  {
+    "type": "list",
+    "title": "添加指令/过滤器/过渡",
+    "list": [
+      "<code>Vue.directive(directName, {<br />&nbsp;&nbsp;bind(el, bindings, vnode) {<br />&nbsp;&nbsp;&nbsp;&nbsp;...;<br />&nbsp;&nbsp;},<br />});</code>",
+      "<cite>https://cn.vuejs.org/v2/guide/custom-directive.html</cite>"
+    ]
+  },
+  {
+    "type": "list2",
+    "title": "通过Vue.mixin，添加hook",
+    "list": [
+      "<code>Vue.mixin({<br />&nbsp;&nbsp;created(){<br />&nbsp;&nbsp;&nbsp;&nbsp;...;<br />&nbsp;&nbsp;}<br />});</code>",
+      "<cite>https://cn.vuejs.org/v2/guide/mixins.html</cite>",
+      "vue.js中搜索LIFECYCLE_HOOKS"
+    ]
+  },
+  {
+    "type": "list",
+    "title": "添加Vue原型方法",
+    "list": [
+      "<code>Vue.prototype.xx = ...;</code>",
+    ]
+  },
+  {
+    "type": "list2",
+    "title": "动手实践",
+    "list": [
+      "地址搜索"
+    ]
+  },
+  {
+    "type": "list",
+    "title": "涉及事件",
+    "list": [
+      "<code>input</code>",
+      "<code>compositionstart</code>",
+      "<code>compositionend</code>"
+    ]
   },
   {
     "type": "image",
     "title": "动手实践",
-    "subTitle": "aaa",
+    "subTitle": "地址搜索改造",
     "image": [
-      "/images/tt.jpg"
+      "/images/vsearch.png"
+    ]
+  },
+  {
+    "type": "word",
+    "content": "这样就结束了...？"
+  },
+  {
+    "type": "list",
+    "title": "优化点",
+    "list": [
+      "事件移除",
+      "数据处理",
+      "请求节流",
+      "修饰符",
+      "..."
+    ]
+  },
+  {
+    "type": "image",
+    "title": "地址改造优化",
+    "subTitle": "事件移除 => removeEventListener",
+    "image": [
+      "/images/vsearch-event.png"
+    ]
+  },
+  {
+    "type": "image2",
+    "title": "地址改造优化",
+    "subTitle": "数据处理 => Store",
+    "image": [
+      "/images/vsearch-data.png"
+    ]
+  },
+  {
+    "type": "image",
+    "title": "地址改造优化",
+    "subTitle": "请求节流 => Promise",
+    "image": [
+      "/images/vsearch-throttle.png"
+    ]
+  },
+  {
+    "type": "image2",
+    "title": "地址改造优化",
+    "subTitle": "修饰符 => modifiers",
+    "image": [
+      "/images/vsearch-promise.png"
     ]
   },
   {
     "type": "list",
     "title": "参考",
     "list": [
-      "https://cn.vuejs.org/v2/guide/installation.html"
+      "<cite>https://cn.vuejs.org/v2/guide/plugins.html</cite>",
+      "<cite>https://developer.mozilla.org/zh-CN</cite>",
+      "<cite>https://wiki.sankuai.com/pages/viewpage.action?pageId=1169620024</cite>"
     ],
   },
   {

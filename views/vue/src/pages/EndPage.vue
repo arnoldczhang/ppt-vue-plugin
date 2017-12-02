@@ -1,12 +1,12 @@
 <template>
   <div class="endPage">
-    <h1 class="title">{{ title }}</h1>
+    <h1 class="title">&nbsp;Thanks & best wishes</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'entrance',
+  name: 'end',
   mounted() {
   },
   methods: {
@@ -15,7 +15,6 @@ export default {
   },
   data() {
     return {
-      title: 'end',
     };
   },
 };
@@ -40,13 +39,19 @@ a {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  background-image: url(/images/bk3.png);
+  background-color: rgb(242, 242, 237);
+  background-size: contain;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
 }
 .title{
-  font-weight: bold;
-  font-size: 72px;
-  color: #333;
+  font-weight: 500;
+  font-size: 48px;
+  color: #fff;
   text-align: center;
+  width: 45%;
 }
 </style>

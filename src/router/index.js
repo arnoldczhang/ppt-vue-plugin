@@ -20,5 +20,10 @@ export default new Router({
       name: 'New',
       component: () => import('@/components/New'),
     },
+    {
+      path: '/newer',
+      name: 'Newer',
+      component: () => import('@/components/Newer'),
+    },
   ],
 });

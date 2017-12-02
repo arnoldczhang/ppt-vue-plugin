@@ -24,6 +24,8 @@ module.exports = {
   },
   // add your custom rules here
   'rules': {
+    'consistent-return': 0,
+    'no-underscore-dangle': 0,
     'no-new': 0,
     'object-shorthand': 0,
     'no-console': 0,

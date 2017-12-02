@@ -26,5 +26,5 @@ app
 
 if (!module.parent) app.listen(port, () => {
   console.log(`koa started at ${port} port`);
-  // open(`http://${host}:${port}`);
+  open(`http://${host}:${port}`);
 });

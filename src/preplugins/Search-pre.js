@@ -1,3 +1,16 @@
+/*
+'beforeCreate',
+  'created',
+  'beforeMount',
+  'mounted',
+  'beforeUpdate',
+  'updated',
+  'beforeDestroy',
+  'destroyed',
+  'activated',
+  'deactivated',
+  'errorCaptured'
+ */
 const factory = {};
 factory.install = (Vue, options) => {
   const noop = v => v;
@@ -53,7 +66,7 @@ factory.install = (Vue, options) => {
   };
 
   const bindFunc = (el, binding, vnode) => {
-    console.log('%cbind', 'color: green');
+    console.log('bindFunc');
     const searchFunc = binding.value;
     const ctx = vnode.context;
     const thisMap = searchMap.get(ctx);
@@ -66,11 +79,9 @@ factory.install = (Vue, options) => {
     el.addEventListener('input', eventMap.inputEvent, false);
     el.addEventListener('compositionstart', eventMap.compositionStartEvent, false);
     el.addEventListener('compositionend', eventMap.compositionEndEvent, false);
-    // debugger;
   };
 
   const unbindFunc = (el, binding, vnode) => {
-    console.log('%cunbind', 'color: green');
     const ctx = vnode.context;
     const thisMap = searchMap.get(ctx);
     const eventMap = thisMap.get(el);
@@ -78,7 +89,6 @@ factory.install = (Vue, options) => {
     el.removeEventListener('compositionstart', eventMap.compositionStartEvent);
     el.removeEventListener('compositionend', eventMap.compositionEndEvent);
     thisMap.delete(el);
-    // debugger;
   };
 
   Vue.directive('search', {

@@ -4,6 +4,7 @@ import EnterPage from '../pages/EnterPage';
 import ListPage from '../pages/ListPage';
 import ListPage2 from '../pages/ListPage2';
 import ImagePage from '../pages/ImagePage';
+import ImagePage2 from '../pages/ImagePage2';
 import Demo from '../pages/Demo';
 import WordPage from '../pages/WordPage';
 import EndPage from '../pages/EndPage';
@@ -25,6 +26,7 @@ const componentMap = {
   list2: ListPage2,
   list: ListPage,
   image: ImagePage,
+  image2: ImagePage2,
   demo: Demo,
   word: WordPage,
 };

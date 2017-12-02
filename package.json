@@ -12,9 +12,11 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "build": "node build/build.js",
-    "ppt": "webpack -w & node app.js",
+    "ppt:build:w": "webpack -w & node app.js",
+    "ppt:build": "webpack & node app.js",
+    "ppt": "node app.js",
     "open": "node server.js",
-    "all": "npm run ppt & npm run dev"
+    "all": "npm run ppt:build & npm run dev"
   },
   "dependencies": {
     "internal-ip": "^3.0.1",

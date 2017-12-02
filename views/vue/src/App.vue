@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-on:click="goNext()">
+  <div id="app" v-on:contextmenu="goNext($event)">
     <transition :name="transitionName"  mode="out-in">
       <router-view></router-view>
     </transition>
@@ -20,11 +20,13 @@ export default {
     getPageId(added = 0) {
       return +this.$route.path.replace(/\//, '') + added;
     },
-    goNext() {
+    goNext(e) {
       const pageId = this.getPageId(1);
       if (pageId < this.$router.options.routes.length) {
         this.$router.push(`/${pageId}`);
       }
+      e.preventDefault();
+      e.stopPropagation();
     },
   },
   watch: {
