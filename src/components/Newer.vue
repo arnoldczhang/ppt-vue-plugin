@@ -1,14 +1,14 @@
 <template>
   <div class="hello">
     <section class="input-sec">
-      <input v-if="enable" class="input" v-search.promise="searchFunc" type="text"/>
       <!-- <input v-if="enable" class="input" v-search="searchFunc" type="text"/> -->
+      <input v-if="!enable" class="input" v-on:input="searchInputFunc()" type="text" v-model="word"/>
       <!-- <button v-on:click="toggle">toggle</button> -->
       <!-- <label class="countNumber">{{count}}</label> -->
     </section>
     <ul class="oUl">
       <li v-for="poi in list">
-        <p class="name">{{poi.name}}{{poi.distance}}米</p>
+        <p class="name">{{poi.name}}<label>{{poi.distance}}米</label></p>
         <p class="address">{{poi.address}}</p>
       </li>
     </ul>
@@ -23,6 +23,15 @@ export default {
   mounted() {
   },
   methods: {
+    searchInputFunc() {
+      this.count += 1;
+      fetch(`/search?key=be9427ec-bca4-4bfa-b981-9314f6a1adc7&location=121.420341%2C31.215290&region=NEARBY&orderby=weight&radius=50000&pagesize=20&page=1&city=%E4%B8%8A%E6%B5%B7&_=1512027769948&keyword=${this.word}`)
+        .then(res => res.json())
+        .then(res => res.result)
+        .then((data) => {
+          this.list = data.pois;
+        });
+    },
     searchFunc(value, resolve) {
       this.count += 1;
       fetch(`/search?key=be9427ec-bca4-4bfa-b981-9314f6a1adc7&location=121.420341%2C31.215290&region=NEARBY&orderby=weight&radius=50000&pagesize=20&page=1&city=%E4%B8%8A%E6%B5%B7&_=1512027769948&keyword=${value}`)
@@ -39,7 +48,7 @@ export default {
   },
   data() {
     return {
-      enable: true,
+      enable: false,
       count: 0,
       word: '',
       list: [],
@@ -130,6 +139,11 @@ a {
   line-height: 20px;
   font-size: 14px;
   color: #333;
+  width: 90%;
+}
+.oUl > li > .name > label {
+  float: right;
+  color: #fb4e44!important;
 }
 .oUl > li > .address {
   margin-top: 5px;
@@ -140,5 +154,6 @@ a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 90%;
 }
 </style>

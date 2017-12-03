@@ -16,22 +16,9 @@
     "title": "vue简介",
     "list": [
       "安装",
+      "<cite>https://cn.vuejs.org/v2/guide/installation.html</cite>",
       "结构",
       "风格"
-    ]
-  },
-  {
-    "type": "list",
-    "title": "vue - 安装",
-    "list": [
-      "<cite>https://cn.vuejs.org/v2/guide/installation.html</cite>"
-    ]
-  },
-  {
-    "type": "list2",
-    "title": "vue - 结构 + 风格",
-    "list": [
-      "看代码"
     ]
   },
   {
@@ -116,14 +103,14 @@
   },
   {
     "type": "word",
-    "content": "这样就结束了...？"
+    "content": "这么快就完事了...？"
   },
   {
     "type": "list",
     "title": "优化点",
     "list": [
       "事件移除",
-      "数据处理",
+      "数据存储",
       "请求节流",
       "修饰符",
       "..."
@@ -140,7 +127,7 @@
   {
     "type": "image2",
     "title": "地址改造优化",
-    "subTitle": "数据处理 => Store",
+    "subTitle": "数据存储 => Vue.mixin + Store",
     "image": [
       "/images/vsearch-data.png"
     ]
