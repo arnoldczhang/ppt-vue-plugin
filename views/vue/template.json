@@ -127,7 +127,7 @@
   {
     "type": "image2",
     "title": "地址改造优化",
-    "subTitle": "数据存储 => Vue.mixin + Store",
+    "subTitle": "数据存储 => Store + Vue.mixin(created, destroyed)",
     "image": [
       "/images/vsearch-data.png"
     ]
