@@ -15,8 +15,7 @@
     "type": "list2",
     "title": "vue简介",
     "list": [
-      "安装",
-      "<cite>https://cn.vuejs.org/v2/guide/installation.html</cite>",
+      "<a target='_blank' href='https://cn.vuejs.org/v2/guide/installation.html#命令行工具-CLI'>安装</a>",
       "结构",
       "风格"
     ]
@@ -42,7 +41,7 @@
     "list": [
       "添加基于Vue对象的方法或者属性",
       "添加指令/过滤器/过渡",
-      "通过Vue.mixin，添加hook",
+      "通过<code>Vue.mixin</code>，添加hook",
       "添加Vue原型方法"
     ]
   },
@@ -58,7 +57,7 @@
     "title": "添加指令/过滤器/过渡",
     "list": [
       "<code>Vue.directive(directName, {<br />&nbsp;&nbsp;bind(el, bindings, vnode) {<br />&nbsp;&nbsp;&nbsp;&nbsp;...;<br />&nbsp;&nbsp;},<br />});</code>",
-      "<cite>https://cn.vuejs.org/v2/guide/custom-directive.html</cite>"
+      "<a target='_blank' href='https://cn.vuejs.org/v2/guide/custom-directive.html#钩子函数'>详情看这里</a>"
     ]
   },
   {
@@ -66,8 +65,8 @@
     "title": "通过Vue.mixin，添加hook",
     "list": [
       "<code>Vue.mixin({<br />&nbsp;&nbsp;created(){<br />&nbsp;&nbsp;&nbsp;&nbsp;...;<br />&nbsp;&nbsp;}<br />});</code>",
-      "<cite>https://cn.vuejs.org/v2/guide/mixins.html</cite>",
-      "vue.js中搜索LIFECYCLE_HOOKS"
+      "<a target='_blank' href='https://cn.vuejs.org/v2/guide/mixins.html'>详情看这里</a>",
+      "vue.js中搜索<code>LIFECYCLE_HOOKS</code>"
     ]
   },
   {
@@ -81,7 +80,7 @@
     "type": "list2",
     "title": "动手实践",
     "list": [
-      "地址搜索"
+      "地址搜索改造"
     ]
   },
   {
@@ -103,7 +102,7 @@
   },
   {
     "type": "word",
-    "content": "这么快就完事了...？"
+    "content": "这样就结束了...？"
   },
   {
     "type": "list",
@@ -118,7 +117,7 @@
   },
   {
     "type": "image",
-    "title": "地址改造优化",
+    "title": "改造优化",
     "subTitle": "事件移除 => removeEventListener",
     "image": [
       "/images/vsearch-event.png"
@@ -126,7 +125,7 @@
   },
   {
     "type": "image2",
-    "title": "地址改造优化",
+    "title": "改造优化",
     "subTitle": "数据存储 => Store + Vue.mixin(created, destroyed)",
     "image": [
       "/images/vsearch-data.png"
@@ -134,7 +133,7 @@
   },
   {
     "type": "image",
-    "title": "地址改造优化",
+    "title": "改造优化",
     "subTitle": "请求节流 => Promise",
     "image": [
       "/images/vsearch-throttle.png"
@@ -142,7 +141,7 @@
   },
   {
     "type": "image2",
-    "title": "地址改造优化",
+    "title": "改造优化",
     "subTitle": "修饰符 => modifiers",
     "image": [
       "/images/vsearch-promise.png"

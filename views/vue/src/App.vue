@@ -45,6 +45,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   width: 100vw;
+  opacity: 1;
 }
 body, div, section, article {
   margin: 0;

@@ -15,6 +15,10 @@ module.exports = () => {
             background-position-x: 100%;
             background-color: rgb(242, 242, 237);
           }
+          a {
+            text-decoration: none;
+            color: #333;
+          }
         </style>
         <header></header>
         <article id="app"></article>
