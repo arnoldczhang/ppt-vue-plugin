@@ -87,7 +87,7 @@
     "type": "list",
     "title": "涉及事件",
     "list": [
-      "<code>input</code>",
+      "<code><a target='_blank' href='http://blog.csdn.net/yiifaa/article/details/52372022' >input</a></code>",
       "<code>compositionstart</code>",
       "<code>compositionend</code>"
     ]

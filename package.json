@@ -7,16 +7,18 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
+    "dev:build": "cross-env BUILD=build npm run dev",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "build": "node build/build.js",
     "ppt:build:w": "webpack -w & node app.js",
-    "ppt:build": "webpack & node app.js",
+    "ppt:build": "webpack & cross-env BUILD=build node app.js",
     "ppt": "node app.js",
     "open": "node server.js",
-    "all": "npm run ppt:build & npm run dev"
+    "all": "npm run ppt & npm run dev",
+    "all:build": "npm run ppt:build & npm run dev:build"
   },
   "dependencies": {
     "internal-ip": "^3.0.1",
