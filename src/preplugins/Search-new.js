@@ -14,9 +14,10 @@ const factory = (Vue, options) => {
 
     const callback = () => {
       vnode.isPending = false;
-      if (typeof vnode.nextTick === 'function') {
-        promisify(vnode, vnode.nextTick);
+      let nextTick = vnode.nextTick;
+      if (typeof nextTick === 'function') {
         vnode.nextTick = null;
+        promisify(vnode, nextTick);
       }
     };
     promise.then(callback).catch(callback);
