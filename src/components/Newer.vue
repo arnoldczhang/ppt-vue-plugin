@@ -32,14 +32,13 @@ export default {
           this.list = data.pois;
         });
     },
-    searchFunc(value, resolve) {
+    searchFunc(value) {
       this.count += 1;
       fetch(`/search?key=be9427ec-bca4-4bfa-b981-9314f6a1adc7&location=121.420341%2C31.215290&region=NEARBY&orderby=weight&radius=50000&pagesize=20&page=1&city=%E4%B8%8A%E6%B5%B7&_=1512027769948&keyword=${value}`)
         .then(res => res.json())
         .then(res => res.result)
         .then((data) => {
           this.list = data.pois;
-          if (typeof resolve === 'function') resolve();
         });
     },
     toggle() {

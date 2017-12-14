@@ -19,7 +19,7 @@ module.exports = {
             pathRewrite: {
               '^/search': '/search'
             }
-          }
+        }
     },
 
     // Various Dev Server settings

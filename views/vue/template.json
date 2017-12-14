@@ -65,7 +65,7 @@
     "title": "通过Vue.mixin，添加hook",
     "list": [
       "<code>Vue.mixin({<br />&nbsp;&nbsp;created(){<br />&nbsp;&nbsp;&nbsp;&nbsp;...;<br />&nbsp;&nbsp;}<br />});</code>",
-      "<a target='_blank' href='https://cn.vuejs.org/v2/guide/mixins.html'>详情看这里</a>",
+      "<a target='_blank' href='https://cn.vuejs.org/v2/guide/mixins.html#全局混合'>详情看这里</a>",
       "vue.js中搜索<code>LIFECYCLE_HOOKS</code>"
     ]
   },
@@ -102,7 +102,7 @@
   },
   {
     "type": "word",
-    "content": "这样就结束了...？"
+    "content": "这样就结束了...\　⃢？"
   },
   {
     "type": "list",
